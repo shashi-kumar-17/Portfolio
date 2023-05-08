@@ -549,3 +549,12 @@ a button:hover {
     margin: 30px 35px;
     font-size: 2.4em;
 }
+
+#preloader{
+    background: #282727 url(/img/dual-ball.gif) no-repeat center center;
+    background-size: 8%;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
