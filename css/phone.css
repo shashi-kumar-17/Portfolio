@@ -4,6 +4,7 @@
 
 #navbar .headings{
     margin: auto;
+    padding: 30px;
 }
 
 .h-primary{
@@ -21,7 +22,7 @@
 }
 .text{
     width: 100vw;
-    margin-left: 40px;
+    margin-left: 80px;
     margin-top: 20px;
 }
 .h-primary{
@@ -80,7 +81,7 @@
 }
 .container3 .icons{
     font-size: 4rem;
-    margin: 40px 60px;
+    margin: 40px 50px;
 }
 
 .container3 .btn{
