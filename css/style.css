@@ -150,13 +150,13 @@ body {
     }
 }
 
-.image {
+.container .image {
     padding: 100px;
     transform: translate(300px, 50px);
     transition: 0.8s;
 }
 
-.image img {
+.container .image img {
     margin-right: 0;
     width: 350px;
     height: 350px;
@@ -461,6 +461,7 @@ a button:hover {
 
 .container3 {
     width: 25%;
+    height: 70%;
     background-color: #393e467d;
     padding: 20px 40px;
     border-radius: 10px;

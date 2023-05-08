@@ -1,0 +1,88 @@
+#navbar{
+    flex-direction: column;
+}
+
+#navbar .headings{
+    margin: auto;
+}
+
+.h-primary{
+    margin-top: 900px;
+}
+
+.container .image{
+    margin-left: -900px;
+    margin-top: -600px;
+    
+}
+.container .image img{
+    width: 70%;
+    height: 20%;
+}
+.text{
+    width: 100vw;
+    margin-left: 40px;
+    margin-top: 20px;
+}
+.h-primary{
+    font-size: 8rem;
+}
+.h-secondary{
+    font-size: 7.5rem;
+}
+.container button{
+    margin-top: 60px;
+    width: 30%;
+    height: 100%;
+    font-size: 1.4rem;
+}
+.box{
+    top: 70%;
+    left: -60%;
+}
+
+.aboutMe{
+    margin-top: 200px;
+}
+
+.aboutMe .caption{
+    width: 80%;
+    font-size: 1.4rem;
+}
+
+.container1{
+    margin-top: -600px;
+}
+
+.container1 .h-heading1{
+    font-size: 4.8rem;
+}
+.box2{
+    /* font-size: 4rem; */
+    width: 40%;
+}
+
+.container1 .tile{
+    margin-left: 200px;
+}
+
+.container3{
+    margin-top: 200px;
+    width: 60%;
+    height: 100%;
+}
+.form-control{
+    margin-top: 60px;
+    width: 90%;
+}
+.form-control input{
+    padding: 25px 0;
+}
+.container3 .icons{
+    font-size: 4rem;
+    margin: 40px 60px;
+}
+
+.container3 .btn{
+    width: 90%;
+}
