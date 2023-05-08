@@ -118,7 +118,7 @@ body {
 }
 
 .text {
-    width: 50%;
+    width: 50vw;
     display: grid;
     margin-top: 108px;
     transition-duration: 2s;

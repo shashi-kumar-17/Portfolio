@@ -1,10 +1,29 @@
 #navbar{
     flex-direction: column;
 }
-
+body{
+    /* height: 100vh; */
+}
 #navbar .headings{
     margin: auto;
-    padding: 30px;
+}
+#navbar .logo{
+    margin: auto;
+    /* font-size: 2rem; */
+}
+.logo img{
+    height: 150px;
+    width: 150px;
+    margin-left: 160px;
+}
+#navbar .headings ul{
+    /* padding: 100px 40px; */
+    margin-top: 40px;
+    margin-left: 100px;
+}
+.headings ul li a .icon{
+    margin-right: 60px;
+    font-size: 3.8rem;
 }
 
 .h-primary{
@@ -17,19 +36,22 @@
     
 }
 .container .image img{
-    width: 70%;
+    width: 80%;
     height: 20%;
 }
 .text{
     width: 100vw;
     margin-left: 80px;
-    margin-top: 20px;
+    bottom: 0;
 }
 .h-primary{
     font-size: 8rem;
 }
 .h-secondary{
     font-size: 7.5rem;
+}
+.h-capt{
+    margin-left: 140px;
 }
 .container button{
     margin-top: 60px;
