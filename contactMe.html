@@ -31,7 +31,7 @@
                             class="titles">Skills</span></a></li>
                 <li><a href="/myProjects.html"><span class="icon fa-sharp fa-solid fa-terminal"></span><span
                             class="titles">Projects</span></a></li>
-                <li><a href="/contactMe.php"><span class="icon fa-solid fa-message"></span><span
+                <li><a href="/contactMe.html"><span class="icon fa-solid fa-message"></span><span
                             class="titles">Contact</span></a></li>
             </ul>
         </div>
@@ -40,24 +40,6 @@
     <div class="container3">
         <h1>Contact Me</h1>
         <hr>
-
-        <?php
-
-            if(isset($_GET['error']))
-            {
-                $Msg = "Please fill in the blanks";
-                echo '.$Msg.';
-            }
-
-            if(isset($_GET ['success']))
-            {
-                $Msg = "Your message has been sent";
-                echo '.$Msg.';
-            }
-        
-        
-        
-        ?>
 
         <form action="mail.php" method="post" style="margin: auto;">
             <div class="form-control">
