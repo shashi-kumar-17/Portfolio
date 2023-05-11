@@ -364,7 +364,7 @@ a button:hover {
 .box2 {
     margin: auto;
     margin-top: 25px;
-    width: 24%;
+    width: fit-content;
     height: 52%;
     border: 2px solid white;
     border-radius: 25px;
@@ -389,6 +389,7 @@ a button:hover {
 .box2 ul {
     list-style: none;
     display: flex;
+    padding: 5px 40px;
 }
 
 .box2 ul li .icon {
@@ -421,10 +422,11 @@ a button:hover {
 
 .container1 .tile {
     display: flex;
+    justify-content: center;
     gap: 125px;
     overflow: hidden;
     margin-top: 57px;
-    margin-left: 519px;
+
 }
 
 .container1 .tile .item {
@@ -460,7 +462,7 @@ a button:hover {
 }
 
 .container3 {
-    width: 25%;
+    width: fit-content;
     height: 70%;
     background-color: #393e467d;
     padding: 20px 40px;
