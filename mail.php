@@ -1,20 +1,3 @@
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <?php 
 
     if(isset($_POST['btn-send']))
@@ -33,7 +16,7 @@
 
        {
 
-           header('location:contactMe.html?error');
+           header('location:contactMe.php?error');
 
        }
 
@@ -47,7 +30,7 @@
 
            {
 
-               header("location:contactMe.html?success");
+               header("location:contactMe.php?success");
 
            }
 
@@ -59,7 +42,7 @@
 
     {
 
-        header("location:contactMe.html");
+        header("location:contactMe.php");
 
     }
 
