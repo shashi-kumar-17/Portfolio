@@ -11,7 +11,10 @@ html {
 }
 
 body {
-    background-color: #282727;
+    height: 100%;
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(245.59deg, #4f4d95 0%, #703838 28.53%, #2e3163 75.52%) no-repeat;
     font-family: 'Dancing Script', cursive;
 }
 
@@ -22,8 +25,21 @@ body {
 #navbar {
     display: flex;
     align-items: center;
-    position: sticky;
-    top: 0px;
+    justify-content: space-between;
+    /* position: fixed; */
+    right: 0;
+    top: 0; 
+    z-index: 1000;
+    width: 100%;
+    padding: 8px 12px;
+    background: transparent;
+    animation: nav-animate 1.5s linear;
+}
+
+@keyframes nav-animate {
+    0%{
+        transform: translateY(-100px);
+    }
 }
 
 .logo {
@@ -51,38 +67,31 @@ body {
     transition: 1s;
 }
 
-.headings {
-    margin: auto;
-    margin-left: 250px;
-}
-
 .headings ul {
     display: flex;
     list-style: none;
-    /* width: 100px; */
 }
 
 .headings ul li a {
-    color: #1a6a7c;
+    color: #25d7ff;
     display: flex;
     padding: 3px 60px;
-    /* border-radius: 30px; */
     text-decoration: none;
 }
 
 .headings ul li a span {
-    width: 40px;
+    width: 80px;
 }
 
-/* .headings ul li a:focus,
-.headings ul li a:active,
-.headings ul li a:hover{
-    color: rgb(247, 245, 99);
-    display: block;
-    padding: 3px 22px;
-    border-radius: 30px;
-    text-decoration: none;
-} */
+#menu-icon{
+    font-size: 30px;
+    color: #25d7ff;
+    z-index: 10001;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
 .container {
     display: flex;
     height: 100%;
@@ -91,10 +100,10 @@ body {
 
 .h-primary {
     font-family: 'Dancing Script', cursive;
-    margin-top: 70px;
+    /* margin-top: 70px; */
     color: #fff;
     font-size: 79px;
-    margin-left: 100px;
+    /* margin-left: 100px; */
     cursor: pointer;
     transition: 0.5s;
 }
@@ -103,13 +112,13 @@ body {
     font-family: 'Dancing Script', cursive;
     color: #fff;
     font-size: 79px;
-    margin-left: 83px;
+    /* margin-left: 83px; */
     transition: 0.5s;
     cursor: pointer;
 }
 
 .h-capt {
-    margin-left: 81px;
+    /* margin-left: 81px; */
     text-transform: uppercase;
     letter-spacing: 0.09em;
     color: #47fffc;
@@ -120,12 +129,19 @@ body {
 .text {
     width: 50vw;
     display: grid;
+    place-items: center;
     margin-top: 108px;
     transition-duration: 2s;
+    animation: text-anime 1.4s linear;
+}
+
+@keyframes text-anime {
+    0%{
+        transform: translateX(-700px);
+    }
 }
 
 .animate-character {
-    /* text-transform: uppercase; */
     background-image: linear-gradient(-225deg,
             #231557 0%,
             #b4aabf 29%,
@@ -134,14 +150,11 @@ body {
     background-size: auto auto;
     background-clip: border-box;
     background-size: 200% auto;
-    /* color: #fff; */
     background-clip: text;
-    /* text-fill-color: transparent; */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: textclip 3s linear infinite;
     display: inline-block;
-    /* font-size: 190px; */
 }
 
 @keyframes textclip {
@@ -153,7 +166,6 @@ body {
 .container .image {
     padding: 100px;
     transform: translate(300px, 50px);
-    transition: 0.8s;
 }
 
 .container .image img {
@@ -162,8 +174,14 @@ body {
     height: 350px;
     border: 4px solid rgb(86, 78, 78);
     border-radius: 100%;
-    transition: 01s;
     transform: translate(-200px, 50px);
+    animation: image-anime 1.4s linear;
+}
+
+@keyframes image-anime {
+    0%{
+        transform: translateX(+600px);
+    }
 }
 
 .headings ul li a .icon {
@@ -181,7 +199,7 @@ body {
 
 .headings ul li a .titles {
     position: absolute;
-    color: rgb(206, 105, 22);
+    color: #ff9500;
     font-size: 1.6em;
     letter-spacing: 0.08em;
     transition: 0.5s;
@@ -200,34 +218,57 @@ body {
     transition: 1.4s;
     line-height: 1.2px;
 }
+.container .buttons {
+    margin-left: 40px;
+}
 
 .container button {
     width: 140px;
     height: 48px;
-    background-color: #554141;
-    /* color: #fff; */
+    background: linear-gradient(120deg, #f3dd, #dee2);
     border: 1.2px solid rgb(189, 51, 51);
-    border-radius: 42px 15px;
+    border-radius: 32px 17px;
     margin: 20px 90px;
     cursor: pointer;
-    margin-right: 0;
+    margin-left: 0;
 }
 
 a button {
     text-decoration: none;
     color: #fafdff;
-    font-weight: 700;
+    font-weight: 500;
 }
 
 button:hover {
+    background: linear-gradient(144deg, #3f3f3f, #bceb14);
     transform: scale(1.1);
+    font-weight: 600;
     border: 2px solid antiquewhite;
     animation: glow ease-in-out;
-    background-color: #fafdff;
 }
 
 a button:hover {
     color: #181818;
+}
+.front-social{
+    padding: 10px 60px;
+    margin: 20px 0px;
+    margin-left: 0;
+}
+
+.front-social a{
+    padding: 10px 10px;
+    margin: 30px 20px;
+    border: 2px solid #9f9f9f;
+    border-radius: 100%;
+    font-size: 22px;
+}
+
+.front-social a:hover,
+.front-social a:active,
+.front-social a:focus{
+    background: #fff;
+    transition: 1.2s;
 }
 
 .logo span {
@@ -274,17 +315,16 @@ a button:hover {
     top: 100px;
     right: 250px;
     transform-style: preserve-3d;
-    /* transform: rotateY(60deg); */
-    animation: animate 5s infinite;
+    animation: animate 10s infinite;
 }
 
 @keyframes animate {
     0% {
-        transform: rotateX(90deg) rotateY(-90deg);
+        transform: rotateX(90deg) rotateY(0deg);
     }
 
     25% {
-        transform: rotateX(-72deg) rotateY(72deg);
+        transform: rotateX(-72deg) rotateY(360deg);
     }
 
     50% {
@@ -292,11 +332,11 @@ a button:hover {
     }
 
     75% {
-        transform: rotateX(135deg) rotateY(-135deg);
+        transform: rotateX(0deg) rotateY(-135deg);
     }
 
     100% {
-        transform: rotateX(-72deg) rotateY(-72deg);
+        transform: rotateX(360deg) rotateY(-72deg);
     }
 }
 
@@ -308,6 +348,7 @@ a button:hover {
     right: -10vw;
     transform: translate(-50%, -50%);
     perspective: 1000px;
+    animation: image-anime 1.4s linear;
 }
 
 .card {
@@ -359,6 +400,13 @@ a button:hover {
     justify-content: center;
     margin: auto;
     text-align: center;
+    animation: cont-animate 1.7s linear;
+}
+
+@keyframes cont-animate {
+    0% {
+        transform: translateY(800px);
+    }
 }
 
 .box2 {
@@ -470,6 +518,7 @@ a button:hover {
     overflow: hidden;
     margin: auto;
     margin-top: 30px;
+    animation: cont-animate 1.7s linear;
 }
 
 .container3 h1 {
@@ -552,11 +601,26 @@ a button:hover {
     font-size: 2.4em;
 }
 
-#preloader{
+.container3:hover,
+.container3:active,
+.container3:focus{
+    transform: scale(1.05);
+    transition: ease 1.5s;
+    background: linear-gradient(170.54deg, #4d33ef 28%, #32ffee 72%);
+}
+
+#preloader {
     background: #282727 url(/img/dual-ball.gif) no-repeat center center;
     background-size: 8%;
     height: 100vh;
     width: 100%;
     position: fixed;
     z-index: 100;
+}
+
+@media screen and (max-width: 600px){
+    body{
+        height: 100vh;
+        width: 100%;
+    }
 }
