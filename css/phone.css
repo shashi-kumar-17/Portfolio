@@ -1,112 +1,132 @@
-#navbar{
-    display: flex;
-    flex-direction: column;
-}
-body{
-    /* height: 100vh; */
-}
-#navbar .headings{
-    margin: auto;
-}
-#navbar .logo{
-    margin: auto;
-    /* font-size: 2rem; */
-}
-.logo img{
-    height: 150px;
-    width: 150px;
-    margin-left: 160px;
-}
-#navbar .headings ul{
-    /* padding: 100px 40px; */
-    margin-top: 40px;
-    margin-left: 100px;
-}
-.headings ul li a .icon{
-    margin-right: 60px;
-    font-size: 3.8rem;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
 }
 
-.h-primary{
-    margin-top: 900px;
+#navbar{
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px;
+    background: transparent;
+}
+
+.logo img {
+    background-color: antiquewhite;
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 100%;
+    transition: 0.2s;
+}
+
+.logo span {
+    display: none;
+}
+
+#menu-icon{
+    color: rgb(2, 2, 2);
+    font-size: 1.7rem;
+    cursor: pointer;
+}
+
+.navlist{
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    width: 140px;
+    height: 25vh;
+    background: #333ddd;
+    display: flex;
+    align-items: center; 
+    flex-direction: column;
+    padding: 10px 0px;
+    margin-right: 6px;
+    border-radius: 14px;
+    transition: all .55s ease;
+}
+.navlist .icon{
+    display: none;
+}
+.navlist .titles{
+    color: #fff;
+    font-weight: 600;
+    margin-left: 0;
+    display: block;
+    margin: 7px 0;
+}
+.navlist.open{
+    right: 0;
+}
+
+.container{
+    height: 100%;
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(242.59deg, #237d8d 0%, #a7a756 28.53%, #5f2668 75.52%);
+    position: relative;
+    display: grid;
+    grid-template-rows: repeat(2, 0.5fr);
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
 }
 
 .container .image{
-    margin-left: -900px;
-    margin-top: -600px;
-    
+    order: -10;
 }
+
 .container .image img{
-    width: 80%;
-    height: 20%;
+    height: 200px;
+    width: 200px;
+    border-radius: 100%;
 }
+
 .text{
-    width: 100vw;
-    margin-left: 80px;
-    bottom: 0;
+    margin-top: -100px;
 }
+
 .h-primary{
-    font-size: 8rem;
+    font-size: 3.2rem;
 }
+
 .h-secondary{
-    font-size: 7.5rem;
-}
-.h-capt{
-    margin-left: 140px;
-}
-.container button{
-    margin-top: 60px;
-    width: 30%;
-    height: 100%;
-    font-size: 1.4rem;
-}
-.box{
-    top: 70%;
-    left: -60%;
+    font-size: 3.2rem;
 }
 
-.aboutMe{
-    margin-top: 200px;
+.container .buttons{
+    margin: 20px 0;
 }
 
-.aboutMe .caption{
-    width: 80%;
-    font-size: 1.4rem;
+.container .buttons button{
+    width: 42%;
+    margin: 0 10px;
+    padding: 8px 5px;
+    border: 1px solid black;
+    border-radius: 20%;
+    background: rgb(147, 179, 223);
+    color: #0a00a0;
+    font-weight: 500;
 }
 
-.container1{
-    margin-top: -600px;
+.front-social {
+    margin: 30px 0;
+    display: flex;
+    justify-content: space-between;
 }
 
-.container1 .h-heading1{
-    font-size: 4.8rem;
-}
-.box2{
-    /* font-size: 4rem; */
-    width: 40%;
-}
-
-.container1 .tile{
-    margin-left: 200px;
-}
-
-.container3{
-    margin-top: 200px;
-    width: 60%;
-    height: 100%;
-}
-.form-control{
-    margin-top: 60px;
-    width: 90%;
-}
-.form-control input{
-    padding: 25px 0;
-}
-.container3 .icons{
-    font-size: 4rem;
-    margin: 40px 50px;
-}
-
-.container3 .btn{
-    width: 90%;
+.front-social a{
+    padding: 10px;
+    font-size: 1.6rem;
+    color: #c3bebe;
+    border: 1px solid;
+    border-radius: 100%;
 }
