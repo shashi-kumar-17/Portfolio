@@ -14,7 +14,7 @@ body {
     height: 100%;
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(245.59deg, #4f4d95 0%, #703838 28.53%, #2e3163 75.52%) no-repeat;
+    background: linear-gradient(245.59deg, #4f4d95 0%, #703838 28.53%, #06082c 75.52%) no-repeat;
     font-family: 'Dancing Script', cursive;
 }
 
@@ -26,9 +26,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* position: fixed; */
     right: 0;
-    top: 0; 
+    top: 0;
     z-index: 1000;
     width: 100%;
     padding: 8px 12px;
@@ -37,13 +36,13 @@ body {
 }
 
 @keyframes nav-animate {
-    0%{
+    0% {
         transform: translateY(-100px);
     }
 }
 
 .logo {
-    padding: 20px 35px;
+    padding: 20px 82px;
     display: grid;
 }
 
@@ -83,7 +82,7 @@ body {
     width: 80px;
 }
 
-#menu-icon{
+#menu-icon {
     font-size: 30px;
     color: #25d7ff;
     z-index: 10001;
@@ -136,17 +135,17 @@ body {
 }
 
 @keyframes text-anime {
-    0%{
+    0% {
         transform: translateX(-700px);
     }
 }
 
 .animate-character {
     background-image: linear-gradient(-225deg,
-            #231557 0%,
-            #b4aabf 29%,
-            #ff1361 67%,
-            #fff800 100%);
+            #ceda79 0%,
+            #8157ad 29%,
+            #93103c 67%,
+            #1c94df 100%);
     background-size: auto auto;
     background-clip: border-box;
     background-size: 200% auto;
@@ -179,10 +178,11 @@ body {
 }
 
 @keyframes image-anime {
-    0%{
+    0% {
         transform: translateX(+600px);
     }
 }
+
 
 .headings ul li a .icon {
     position: relative;
@@ -218,6 +218,7 @@ body {
     transition: 1.4s;
     line-height: 1.2px;
 }
+
 .container .buttons {
     margin-left: 40px;
 }
@@ -231,6 +232,7 @@ body {
     margin: 20px 90px;
     cursor: pointer;
     margin-left: 0;
+    transition: all 1s;
 }
 
 a button {
@@ -241,7 +243,7 @@ a button {
 
 button:hover {
     background: linear-gradient(144deg, #3f3f3f, #bceb14);
-    transform: scale(1.1);
+    transform: scale(1.1) translateX(+20px);
     font-weight: 600;
     border: 2px solid antiquewhite;
     animation: glow ease-in-out;
@@ -250,25 +252,46 @@ button:hover {
 a button:hover {
     color: #181818;
 }
-.front-social{
+
+.front-social {
     padding: 10px 60px;
     margin: 20px 0px;
     margin-left: 0;
 }
 
-.front-social a{
+.front-social a {
+    color: #fff;
     padding: 10px 10px;
     margin: 30px 20px;
     border: 2px solid #9f9f9f;
     border-radius: 100%;
     font-size: 22px;
+    position: relative;
+    overflow: hidden;
+    transition: all 1s;
 }
 
 .front-social a:hover,
 .front-social a:active,
-.front-social a:focus{
-    background: #fff;
-    transition: 1.2s;
+.front-social a:focus {
+    color: #0a0a0a;
+}
+
+.front-social a::before {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    background-color: #fff;
+    border-radius: inherit;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 1s ease-in-out;
+}
+
+.front-social a:hover:before {
+    width: 100%;
 }
 
 .logo span {
@@ -283,13 +306,8 @@ a button:hover {
     letter-spacing: 0.09em;
 }
 
-.special {
-    color: #c82a2a;
-}
-
 .h-heading {
-    margin-left: 100px;
-    margin-top: 60p x;
+    margin-top: 60px;
     text-transform: uppercase;
     font-family: 'Cinzel', serif;
     font-size: 60px;
@@ -417,6 +435,7 @@ a button:hover {
     border: 2px solid white;
     border-radius: 25px;
     padding: 20px 0px;
+    background: linear-gradient(54deg, #363030, #281818);
 }
 
 .box2:hover,
@@ -454,11 +473,8 @@ a button:hover {
 }
 
 .box2 ul li .titles {
-    /* transform: translateY(-10px); */
-    /* position: absolute; */
     color: #e89999;
     font-family: 'Poppins', sans-serif;
-    /* margin-top: -100px; */
 }
 
 .box2 h3 {
@@ -603,7 +619,7 @@ a button:hover {
 
 .container3:hover,
 .container3:active,
-.container3:focus{
+.container3:focus {
     transform: scale(1.05);
     transition: ease 1.5s;
     background: linear-gradient(170.54deg, #4d33ef 28%, #32ffee 72%);
@@ -618,9 +634,66 @@ a button:hover {
     z-index: 100;
 }
 
-@media screen and (max-width: 600px){
-    body{
-        height: 100vh;
+@media screen and (max-width: 1092px) {
+    body {
+        height: 100%;
         width: 100%;
+        min-height: 100vh;
+        background: linear-gradient(#352222, rgba(45, 45, 108, 0.4));
     }
+
+    .container{
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+        overflow: hidden;
+        width: 100%;
+        height: 103vh;
+    }
+    .container{
+        margin-top: -78px;
+    }
+}
+
+@media screen and (max-width: 1020px) {
+    .container{
+        height: 111vh;
+    }
+    .text{
+        margin-left: 20px;
+        align-items: center;
+    }
+    .container .image{
+        align-items: center;
+    }
+    .h-primary{
+        font-size: 65px;
+    }
+    .h-secondary{
+        font-size: 60px;
+    }
+    .h-capt {
+        font-size: 0.77rem;
+    }
+    .container .buttons{
+        margin-left: 0px;
+        margin-right: 10px;
+    }
+    .container button{
+        width: 110px;
+        font-size: 0.7rem;
+        margin: 20px 20px;
+    }
+}
+
+@media (max-width: 426px) {
+   body{
+    width: 100%;
+    min-height: 100%;
+    background: #1c94df;
+   }
+   .container{
+    display: grid;
+   }
+   
 }
