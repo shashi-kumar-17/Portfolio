@@ -15,8 +15,11 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 15px;
+    padding: 10px 20px;
     background: transparent;
+}
+.logo{
+    padding: 0;
 }
 
 .logo img {
@@ -33,9 +36,11 @@
 }
 
 #menu-icon{
+    display: block;
     color: rgb(2, 2, 2);
     font-size: 1.7rem;
     cursor: pointer;
+    margin-right: 5px;
 }
 
 .navlist{
@@ -49,20 +54,43 @@
     align-items: center; 
     flex-direction: column;
     padding: 10px 0px;
-    margin-right: 6px;
+    margin-right: 6px;  
     border-radius: 14px;
     transition: all .55s ease;
 }
-.navlist .icon{
-    display: none;
+
+.headings ul li a{
+    display: flex;
+    padding: 0;
 }
-.navlist .titles{
+
+/* .headings ul li a .icon,
+.headings ul li a .titles{
+    flex: 1;
+} */
+
+.headings ul li a .icon {
+    line-height: 2em;
+    font-size: 0.8rem;
+}
+
+.headings ul li a .titles{
+    opacity: 1;
+    font-size: 0.8rem;
+    transform: translatey(-40px)
+}
+/* .headings ul li a .icon {
+    opacity: 0;
+}
+.headings ul li a .titles{
+    position: absolute;
+    text-transform: uppercase;
     color: #fff;
     font-weight: 600;
     margin-left: 0;
     display: block;
     margin: 7px 0;
-}
+} */
 .navlist.open{
     right: 0;
 }
