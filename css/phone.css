@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600&family=Poppins:wght@100;200;300;400;500&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -8,13 +8,14 @@
     text-decoration: none;
     font-family: 'Poppins', sans-serif;
 }
-body{
+
+body {
     height: -webkit-fill-available;
     min-height: 100vh;
     background: linear-gradient(242.59deg, #121414 0%, #212134 28.53%, #412c45 75.52%);
 }
 
-#navbar{
+#navbar {
     position: fixed;
     right: 0;
     top: 0;
@@ -40,13 +41,13 @@ body{
     display: none;
 }
 
-#menu-icon{
+#menu-icon {
     color: rgb(240, 238, 238);
     font-size: 1.7rem;
     cursor: pointer;
 }
 
-.navlist{
+.navlist {
     position: absolute;
     top: 100%;
     right: -100%;
@@ -54,28 +55,31 @@ body{
     height: 25vh;
     background: #fefffe00;
     display: flex;
-    align-items: center; 
+    align-items: center;
     flex-direction: column;
     /* padding: 10px 0px; */
     /* margin-right: 6px; */
     border-radius: 14px;
     transition: all .55s ease;
 }
-.navlist .icon{
+
+.navlist .icon {
     display: none;
 }
-.navlist .titles{
+
+.navlist .titles {
     color: #fff;
     font-weight: 600;
     margin-left: 0;
     display: block;
     margin: 7px 0;
 }
-.navlist.open{
+
+.navlist.open {
     right: 0;
 }
 
-.container{
+.container {
     height: 100%;
     width: 100%;
     min-height: 100vh;
@@ -88,26 +92,33 @@ body{
     gap: 1rem;
 }
 
-.container .image{
+.container .image {
     order: -10;
 }
 
-.container .image img{
+.container .image img {
     height: 200px;
     width: 200px;
     border-radius: 100%;
 }
 
-.text{
+.text {
     margin-top: -100px;
 }
 
-.h-primary, .h-secondary, .special{
+.h-primary,
+.h-secondary {
+    text-indent: 30px;
     font-size: 3.2rem;
     font-family: 'Dancing Script', cursive;
 }
 
-.h-capt{
+.special {
+    font-size: 3.2rem;
+    font-family: 'Dancing Script', cursive;
+}
+
+.h-capt {
     font-family: 'Poppins', sans-serif;
     color: #c3bebe;
     font-size: 0.9rem;
@@ -135,14 +146,14 @@ body{
     }
 }
 
-.container .buttons{
+.container .buttons {
     /* margin: 20px 0; */
     display: grid;
     /* padding: 0 10px; */
     justify-content: center;
 }
 
-.container .buttons button{
+.container .buttons button {
     width: 100%;
     margin: 0 10px;
     padding: 8px 5px;
@@ -160,19 +171,19 @@ body{
     justify-content: space-around;
 }
 
-.front-social a{
-    padding: 5px 10px ;
+.front-social a {
+    padding: 5px 10px;
     font-size: 1.3rem;
     color: #00ffa6;
     border: 1px solid;
     border-radius: 100%;
 }
 
-.box{
+.box {
     display: none;
 }
 
-.aboutMe{
+.aboutMe {
     margin: 100px 20px;
     display: grid;
     place-items: center;
@@ -180,22 +191,23 @@ body{
     transform: translateY(100px);
 }
 
-.h-heading{
+.h-heading {
     color: #18c4be;
     font-size: 3rem;
     font-weight: 600;
     text-transform: uppercase;
 }
 
-.caption p{
+.caption p {
     margin: 15px 13px;
     text-indent: 20px;
 }
-.h-content{
+
+.h-content {
     color: #ffae00;
 }
 
-.container1{
+.container1 {
     position: relative;
     height: 100%;
     min-height: 100vh;
@@ -217,7 +229,8 @@ body{
     background: linear-gradient(54deg, #221d1d, #518273);
     margin-bottom: 0;
 }
-.h-heading1{
+
+.h-heading1 {
     font-size: 3.2rem;
     color: #d2c109;
 }
@@ -253,15 +266,51 @@ body{
     text-shadow: 0.8px 0.6px #fff;
 }
 
+.container1 .tile {
+    display: grid;
+    justify-content: center;
+    gap: 2rem;
+    overflow: hidden;
+    margin-top: 30px;
+
+}
+
+.container1 .tile .item {
+    min-width: 140px;
+    width: 220px;
+    padding: 10px;
+    background-color: #181818;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all ease 0.4s;
+}
+
+.container1 .tile .item a {
+    text-decoration: none;
+    font-weight: 300;
+}
+
+.tile img {
+    width: 100%;
+    height: 70%;
+    border-radius: 12px;
+}
+
+.container1 .tile h4 {
+    color: #fff;
+    margin-top: 7px;
+}
+
+
 .container3 {
     width: fit-content;
     height: 70%;
     background-color: #393e467d;
-    padding: 20px 30px;
+    padding: 10px 5px;
     border-radius: 20px;
     overflow: hidden;
     margin: auto;
-    margin-top: 80px;
+    margin-top: 100px;
 }
 
 .container3 h1 {
@@ -304,7 +353,7 @@ body{
     border: 0;
     border-bottom: 2px #fff solid;
     display: block;
-    width: 100%;
+    width: 90%;
     padding: 15px 0;
     font-size: 16px;
     font-family: inherit;
