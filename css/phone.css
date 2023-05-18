@@ -15,11 +15,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 20px;
+    padding: 10px 15px;
     background: transparent;
-}
-.logo{
-    padding: 0;
 }
 
 .logo img {
@@ -36,11 +33,9 @@
 }
 
 #menu-icon{
-    display: block;
     color: rgb(2, 2, 2);
     font-size: 1.7rem;
     cursor: pointer;
-    margin-right: 5px;
 }
 
 .navlist{
@@ -49,42 +44,19 @@
     right: -100%;
     width: 140px;
     height: 25vh;
-    background: #d2d2de;
+    background: #333ddd;
     display: flex;
     align-items: center; 
     flex-direction: column;
     padding: 10px 0px;
-    margin-right: 6px;  
+    margin-right: 6px;
     border-radius: 14px;
     transition: all .55s ease;
 }
-/* 
-.headings ul li a{
-    display: flex;
-    padding: 0;
-} */
-
-/* .headings ul li a .icon,
-.headings ul li a .titles{
-    flex: 1;
-} */
-
-.headings ul li a .icon {
-    line-height: 2em;
-    font-size: 0.9rem;
+.navlist .icon{
+    display: none;
 }
-
-/* .headings ul li a .titles{
-    opacity: 1;
-    font-size: 0.8rem;
-    transform: translatey(-40px)
-} */
-/* .headings ul li a .icon {
-    opacity: 0;
-} */
 .navlist .titles{
-    position: absolute;
-    text-transform: uppercase;
     color: #fff;
     font-weight: 600;
     margin-left: 0;
