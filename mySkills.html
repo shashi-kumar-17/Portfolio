@@ -7,9 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Skills</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <!-- <link rel="stylesheet" media="screen and (max-width: 1170px)" href="css/phone.css" /> -->
-    <!-- <script defer src="activePage.js"></script> -->
+    <link rel="stylesheet" media="screen and (min-width: 601px)" href="css/style.css" />
+    <link rel="stylesheet" media="screen and (max-width: 600px)" href="css/phone.css" />
 </head>
 
 <body>
@@ -24,7 +23,7 @@
             <span class="h-ternary">Shashi Kumar</span>
         </div>
         <div class="headings">
-            <ul>
+            <ul class="navlist">
                 <li><a href="/index.html"><span class="icon fa fa-home"></span><span class="titles">Home</span></a></li>
                 <li><a href="/about-me.html"><span class="icon fa fa-user"></span><span class="titles">About</span></a>
                 </li>
@@ -36,10 +35,11 @@
                             class="titles">Contact</span></a></li>
             </ul>
         </div>
+        <div class="fa-solid fa-bars" id="menu-icon"></div>
     </nav>
 
     <div class="container1">
-        <h2 class="h-primary h-heading1">My Skills</h2>
+        <h2 class="h-heading1">My Skills</h2>
         <div class="box2">
             <h3>Technical Skills</h3>
             <ul>
@@ -63,6 +63,7 @@
 
 
     <script src="https://kit.fontawesome.com/962c92d0ca.js" crossorigin="anonymous"></script>
+    <script src="js/menu.js"></script>
     <script defer src="js/activePage.js"></script>
     <script src="js/preloader.js"></script>
 </body>
