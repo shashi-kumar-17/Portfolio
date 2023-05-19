@@ -24,14 +24,14 @@
         </div>
         <div class="headings">
             <ul class="navlist">
-                <li><a href="/index.html"><span class="icon fa fa-home"></span><span class="titles">Home</span></a></li>
-                <li><a href="/about-me.html"><span class="icon fa fa-user"></span><span class="titles">About</span></a>
+                <li><a class="nav-item" href="/index.html"><span class="icon fa fa-home"></span><span class="titles">Home</span></a></li>
+                <li><a class="nav-item" href="/about-me.html"><span class="icon fa fa-user"></span><span class="titles">About</span></a>
                 </li>
-                <li><a href="/mySkills.html"><span class="icon fa-solid fa-user-gear"></span><span
+                <li><a class="nav-item  active" href="/mySkills.html"><span class="icon fa-solid fa-user-gear"></span><span
                             class="titles">Skills</span></a></li>
-                <li><a href="/myProjects.html"><span class="icon fa-sharp fa-solid fa-terminal"></span><span
+                <li><a class="nav-item" href="/myProjects.html"><span class="icon fa-sharp fa-solid fa-terminal"></span><span
                             class="titles">Projects</span></a></li>
-                <li><a href="/contactMe.html"><span class="icon fa-solid fa-message"></span><span
+                <li><a class="nav-item" href="/contactMe.html"><span class="icon fa-solid fa-message"></span><span
                             class="titles">Contact</span></a></li>
             </ul>
         </div>
@@ -62,10 +62,15 @@
     </div>
 
 
-    <script src="https://kit.fontawesome.com/962c92d0ca.js" crossorigin="anonymous"></script>
-    <script src="js/menu.js"></script>
-    <script defer src="js/activePage.js"></script>
     <script src="js/preloader.js"></script>
+    <script src="https://kit.fontawesome.com/962c92d0ca.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <script defer src="js/activePage.js"></script>
+    <script>
+        feather.replace();
+
+        document.querySelector(".nav-item").focus();
+    </script>
 </body>
 
 </html>

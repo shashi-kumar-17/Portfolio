@@ -1,124 +1,130 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600&family=Poppins:wght@100;200;300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700;800&family=Poppins:wght@100;200;300;400;500&display=swap');
 
-* {
+*{
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    list-style: none;
-    text-decoration: none;
-    font-family: 'Poppins', sans-serif;
 }
 
-body {
+html{
+    scroll-behavior: smooth;
+    background-color: #ebebeb;
     height: -webkit-fill-available;
-    min-height: 100vh;
-    background: linear-gradient(242.59deg, #121414 0%, #212134 28.53%, #412c45 75.52%);
 }
 
-#navbar {
-    position: fixed;
-    right: 0;
+body{
+    width: 480px;
+    height: 100vh;
+    height: -webkit-fill-available;
+    min-height: 90vh;
     top: 0;
-    z-index: 1000;
-    width: 100%;
+    background: linear-gradient(242.59deg, #7da838 0%, #6db4b1 28.53%, #6f6f7c 75.52%);
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+.navlist{
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 15px;
-    background: transparent;
-}
-
-.logo img {
-    background-color: antiquewhite;
-    width: 30px;
-    height: 30px;
-    border: 1px solid black;
-    border-radius: 100%;
-    transition: 0.2s;
-}
-
-.logo span {
-    display: none;
-}
-
-#menu-icon {
-    color: rgb(240, 238, 238);
-    font-size: 1.7rem;
-    cursor: pointer;
-}
-
-.navlist {
-    position: absolute;
-    top: 100%;
-    right: -100%;
-    width: 140px;
-    height: 25vh;
-    background: #fefffe00;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    /* padding: 10px 0px; */
-    /* margin-right: 6px; */
-    border-radius: 14px;
-    transition: all .55s ease;
-}
-
-.navlist .icon {
-    display: none;
-}
-
-.navlist .titles {
-    color: #fff;
-    font-weight: 600;
-    margin-left: 0;
-    display: block;
-    margin: 7px 0;
-}
-
-.navlist.open {
+    justify-content: space-around;
+    background-color: #333;
+    padding: 12px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
     right: 0;
+    width: 100vw;
 }
 
-.container {
+.logo{
+    display: none;
+}
+
+.navlist{
+    list-style: none;
+}
+
+.nav-item{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    padding: 12px 16px;
+    border-radius: 50px;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.nav-item .titles{
+    width: 0;
+    overflow: hidden;
+    transition: .3s;
+}
+
+.nav-item:focus,
+nav a.active{
+    text-decoration: none;
+    color: #fff;
+    background-color: rgba(255,255,255,0.2);
+    transition: .3s;
+}
+
+.nav-item:focus .titles,
+nav a.active .titles{
+    width: 100%;
+    margin-left: 8px;
+    transition: .3s;
+}
+
+*:focus{
+    outline: none;
+    border: none;
+}
+
+#menu-icon{
+    display: none;
+}
+
+.container{
+    position: absolute;
     height: 100%;
     width: 100%;
-    min-height: 100vh;
-    /* background: linear-gradient(242.59deg, #121414 0%, #212134 28.53%, #412c45 75.52%); */
-    position: relative;
-    display: grid;
-    grid-template-rows: repeat(2, 0.5fr);
+    min-height: 90vh;
+    /* background: linear-gradient(242.59deg, #7da838 0%, #6db4b1 28.53%, #000000 75.52%); */
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
 }
 
-.container .image {
+.text{
+    position: absolute;
+    bottom: 130px;
+}
+
+.container .image{
+    position: absolute;
+    top: 100px;
     order: -10;
 }
 
-.container .image img {
+.container .image img{
     height: 200px;
     width: 200px;
     border-radius: 100%;
 }
 
-.text {
-    margin-top: -100px;
-}
-
-.h-primary,
-.h-secondary {
-    text-indent: 30px;
+.h-primary, .h-secondary{
+    text-indent: 25px;
     font-size: 3.2rem;
     font-family: 'Dancing Script', cursive;
 }
 
-.special {
+.special{
     font-size: 3.2rem;
     font-family: 'Dancing Script', cursive;
 }
 
-.h-capt {
+.h-capt{
     font-family: 'Poppins', sans-serif;
     color: #c3bebe;
     font-size: 0.9rem;
@@ -146,18 +152,17 @@ body {
     }
 }
 
-.container .buttons {
-    /* margin: 20px 0; */
-    display: grid;
-    /* padding: 0 10px; */
-    justify-content: center;
+.container .buttons{
+    display: flex;
+    justify-content: space-between;
 }
 
-.container .buttons button {
+.container .buttons button{
     width: 100%;
     margin: 0 10px;
     padding: 8px 5px;
     border: 1px solid black;
+    cursor: pointer;
     background: rgb(147, 179, 223);
     color: #df6113;
     font-weight: 600;
@@ -171,52 +176,51 @@ body {
     justify-content: space-around;
 }
 
-.front-social a {
-    padding: 5px 10px;
+.front-social a{
+    padding: 5px 10px ;
     font-size: 1.3rem;
-    color: #00ffa6;
+    color: #bba5e7e6;
     border: 1px solid;
     border-radius: 100%;
 }
 
-.box {
+.box{
     display: none;
 }
 
-.aboutMe {
-    margin: 100px 20px;
+.aboutMe{
     display: grid;
     place-items: center;
-    margin-bottom: 0;
-    transform: translateY(100px);
+    position: absolute;
+    top: 80px;
 }
 
-.h-heading {
-    color: #18c4be;
+.h-heading{
+    color: #cb3f0c;
     font-size: 3rem;
     font-weight: 600;
     text-transform: uppercase;
 }
 
-.caption p {
-    margin: 15px 13px;
+
+.caption .h-content{
+    color: #edebeb;
+    margin: 40px 32px;
     text-indent: 20px;
 }
 
-.h-content {
-    color: #ffae00;
+.container1{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
-.container1 {
-    position: relative;
-    height: 100%;
-    min-height: 100vh;
-    justify-content: center;
-    margin: auto;
-    text-align: center;
-    margin-top: 200px;
-    margin-bottom: 0;
-}
 
 .box2 {
     margin: auto;
@@ -230,12 +234,14 @@ body {
     margin-bottom: 0;
 }
 
-.h-heading1 {
+
+.h-heading1{
     font-size: 3.2rem;
     color: #d2c109;
 }
 
 .box2 ul {
+    list-style: none;
     display: flex;
     padding: 5px 30px;
 }
@@ -267,7 +273,8 @@ body {
 }
 
 .container1 .tile {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     gap: 2rem;
     overflow: hidden;
@@ -301,17 +308,32 @@ body {
     margin-top: 7px;
 }
 
+.container1 .tile .item:hover,
+.container1 .tile .item:focus,
+.container1 .tile .item:active {
+    transform: scale(1.03);
+    box-shadow: 2px 2px 5px #47fffc;
+}
 
 .container3 {
+    position: absolute;
+    top: 50px;
+    left: 60px;
     width: fit-content;
-    height: 70%;
+    height: 80%;
     background-color: #393e467d;
     padding: 10px 5px;
     border-radius: 20px;
     overflow: hidden;
-    margin: auto;
-    margin-top: 100px;
+    display: flex;
 }
+
+
+#contact-form{
+    width: fit-content;
+    min-height: 80%;
+}
+
 
 .container3 h1 {
     color: #47fffc;
@@ -341,6 +363,7 @@ body {
     transform: scale(0.98);
 }
 
+
 .form-control {
     position: relative;
     margin: 20px 0 40px;
@@ -356,7 +379,6 @@ body {
     width: 90%;
     padding: 15px 0;
     font-size: 16px;
-    font-family: inherit;
     color: #fff;
 }
 
@@ -368,6 +390,8 @@ body {
 
 .form-control label {
     position: absolute;
+    font-family: 'Dancing Script', cursive;
+    font-weight: 800;
     top: 15px;
     left: 0;
     pointer-events: none;
@@ -392,10 +416,38 @@ body {
     font-size: 2.4em;
 }
 
-.container3:hover,
-.container3:active,
-.container3:focus {
-    transform: scale(1.05);
-    transition: ease 1.5s;
-    background: linear-gradient(170.54deg, #4d33ef 28%, #32ffee 72%);
+@media screen and (max-width: 420px) {
+    body{
+        width: 420px;
+    }
+
+    .container3{
+        position: relative;
+        left: 40px;
+        transition: 0.3s ease;
+    }
 }
+@media screen and (max-width: 384px) {
+    body{
+        width: 384px;
+    }
+
+    .container3{
+        position: relative;
+        left: 20px;
+        transition: 0.3s ease;
+    }
+}
+@media screen and (max-width: 362px) {
+    body{
+        width: 362px;
+    }
+
+
+    .container3{
+        position: relative;
+        left: 10px;
+        transition: all 0.3s ease;
+    }
+}
+
