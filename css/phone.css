@@ -70,8 +70,8 @@ nav a.active{
 
 .nav-item:focus .titles,
 nav a.active .titles{
-    width: 100%;
-    margin-left: 8px;
+    /* width: 100%;
+    margin-left: 8px; */
     transition: .3s;
 }
 
@@ -325,14 +325,14 @@ nav a.active .titles{
     padding: 10px 5px;
     border-radius: 20px;
     overflow: hidden;
-    display: flex;
+    /* display: flex; */
 }
 
 
-#contact-form{
+/* #contact-form{
     width: fit-content;
     min-height: 80%;
-}
+} */
 
 
 .container3 h1 {
