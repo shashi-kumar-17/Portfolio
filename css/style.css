@@ -239,7 +239,7 @@ a button {
     font-weight: 500;
 }
 
-button:hover {
+.buttons button:hover {
     background: linear-gradient(144deg, #3f3f3f, #bceb14);
     transform: scale(1.1) translateX(+20px);
     font-weight: 600;
@@ -617,7 +617,7 @@ a button:hover {
 .container3:hover,
 .container3:active,
 .container3:focus {
-    transform: scale(1.05);
+    transform: scale(1.005);
     transition: ease 1.5s;
     background: linear-gradient(170.54deg, #4d33ef 28%, #32ffee 72%);
 }
